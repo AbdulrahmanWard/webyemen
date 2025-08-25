@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بطاقة تعريف جامعية</title>
+<style>
+  body{display:flex;justify-content:center;align-items:center;height:100vh;background:#f5f7fa;font-family:"Cairo",sans-serif}
+  .id-card{
+    width:340px;aspect-ratio:1.586;
+    background:#fff;border:1px solid #ddd;border-radius:14px;
+    border-bottom:8px solid #0ea5e9;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+  }
+  .content{
+    display:grid;grid-template-columns:110px 1fr;gap:12px;
+    padding:16px;align-items:center;
+  }
+  .photo{width:100px;height:120px;object-fit:cover;border-radius:10px;border:1px solid #ddd}
+  h2{margin:0;font-size:16px}
+  p{margin:4px 0;font-size:13px;color:#444}
+  .muted{color:#777;font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="id-card">
+  <div class="content">
+    <img src="https://i.pravatar.cc/120?img=12" alt="صورة الطالب" class="photo">
+    <div>
+      <h2>عبدالرحمن علي ناجي</h2>
+      <p>الرقم الجامعي: 202512345</p>
+      <p>الكلية: علوم الحاسوب</p>
+      <p>القسم: تقنية المعلومات</p>
+      <p class="muted">تاريخ الانتهاء: 31-08-2026</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
