@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة الموقع - الدمام للعوازل والترميم</title>
+    <meta name="description" content="خريطة شاملة لجميع صفحات موقع الدمام للعوازل والترميم للمساعدة في التنقل والوصول السريع للمعلومات">
+    <meta name="robots" content="index, follow">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.rtl.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-4);
+        }
+        
+        .sitemap-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+        
+        .sitemap-title {
+            color: var(--primary-blue);
+            margin-bottom: var(--space-4);
+        }
+        
+        .sitemap-description {
+            color: var(--text-secondary);
+            font-size: var(--font-size-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+        }
+        
+        .sitemap-section {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+        
+        .sitemap-section:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        
+        .sitemap-section-title {
+            color: var(--primary-blue);
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-3);
+            border-bottom: 2px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .section-icon {
+            font-size: 1.5rem;
+        }
+        
+        .sitemap-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sitemap-links li {
+            margin-bottom: var(--space-3);
+        }
+        
+        .sitemap-link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-3);
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+        }
+        
+        .sitemap-link:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-blue);
+            text-decoration: none;
+            transform: translateX(-4px);
+        }
+        
+        .link-icon {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        .sitemap-stats {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            color: var(--white);
+            text-align: center;
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-8);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-6);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-2);
+        }
+        
+        .stat-label {
+            font-size: var(--font-size-sm);
+            opacity: 0.9;
+        }
+        
+        .breadcrumb {
+            background: var(--bg-secondary);
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-8);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .breadcrumb-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-link:hover {
+            color: var(--primary-blue);
+        }
+        
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+        
+        .search-box {
+            margin-bottom: var(--space-8);
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+            padding: var(--space-4);
+            border: 2px solid var(--border-light);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-base);
+            text-align: center;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .breadcrumb-list {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Header -->
+    <header style="background: var(--primary-blue); color: var(--white); padding: var(--space-4) 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 style="margin: 0; font-size: var(--font-size-xl);">الدمام للعوازل والترميم</h1>
+            <a href="index.php" style="color: var(--white); text-decoration: none; padding: var(--space-2) var(--space-4); background: rgba(255,255,255,0.2); border-radius: var(--radius-md);">العودة للموقع</a>
+        </div>
+    </header>
+
+    <div class="sitemap-container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="index.php" class="breadcrumb-link">الرئيسية</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-separator">←</span>
+                    <span>خريطة الموقع</span>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <div class="sitemap-header">
+            <h1 class="sitemap-title">خريطة الموقع</h1>
+            <p class="sitemap-description">
+                دليل شامل لجميع صفحات ومحتويات موقع الدمام للعوازل والترميم للمساعدة في التنقل والوصول السريع للمعلومات التي تبحث عنها
+            </p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="ابحث في خريطة الموقع..." id="sitemap-search">
+        </div>
+
+        <!-- Statistics -->
+        <div class="sitemap-stats">
+            <h2 style="margin-bottom: var(--space-4);">إحصائيات الموقع</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">إجمالي الصفحات</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">الخدمات الرئيسية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">المدن المخدومة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">المقالات والأدلة</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sitemap Grid -->
+        <div class="sitemap-grid">
+            <!-- Main Pages -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">🏠</span>
+                    الصفحات الرئيسية
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="index.php" class="sitemap-link"><span class="link-icon">→</span> الصفحة الرئيسية</a></li>
+                    <li><a href="about.php" class="sitemap-link"><span class="link-icon">→</span> من نحن</a></li>
+                    <li><a href="contact.php" class="sitemap-link"><span class="link-icon">→</span> تواصل معنا</a></li>
+                    <li><a href="projects.php" class="sitemap-link"><span class="link-icon">→</span> مشاريعنا</a></li>
+                    <li><a href="quote.php" class="sitemap-link"><span class="link-icon">→</span> طلب عرض سعر</a></li>
+                    <li><a href="testimonials.php" class="sitemap-link"><span class="link-icon">→</span> آراء العملاء</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">🔧</span>
+                    خدماتنا
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="services/thermal-insulation.php" class="sitemap-link"><span class="link-icon">→</span> العزل الحراري</a></li>
+                    <li><a href="services/water-insulation.php" class="sitemap-link"><span class="link-icon">→</span> العزل المائي</a></li>
+                    <li><a href="services/renovation.php" class="sitemap-link"><span class="link-icon">→</span> أعمال الترميم</a></li>
+                    <li><a href="services/maintenance.php" class="sitemap-link"><span class="link-icon">→</span> الصيانة الدورية</a></li>
+                    <li><a href="services/consultation.php" class="sitemap-link"><span class="link-icon">→</span> الاستشارات الهندسية</a></li>
+                    <li><a href="services/inspection.php" class="sitemap-link"><span class="link-icon">→</span> فحص وتقييم المباني</a></li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">🏗️</span>
+                    المشاريع
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="projects.php" class="sitemap-link"><span class="link-icon">→</span> جميع المشاريع</a></li>
+                    <li><a href="projects/residential.php" class="sitemap-link"><span class="link-icon">→</span> المشاريع السكنية</a></li>
+                    <li><a href="projects/commercial.php" class="sitemap-link"><span class="link-icon">→</span> المشاريع التجارية</a></li>
+                    <li><a href="projects/industrial.php" class="sitemap-link"><span class="link-icon">→</span> المشاريع الصناعية</a></li>
+                </ul>
+            </div>
+
+            <!-- Cities -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">📍</span>
+                    المدن المخدومة
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="cities/dammam.php" class="sitemap-link"><span class="link-icon">→</span> خدماتنا في الدمام</a></li>
+                    <li><a href="cities/khobar.php" class="sitemap-link"><span class="link-icon">→</span> خدماتنا في الخبر</a></li>
+                    <li><a href="cities/qatif.php" class="sitemap-link"><span class="link-icon">→</span> خدماتنا في القطيف</a></li>
+                    <li><a href="cities/jubail.php" class="sitemap-link"><span class="link-icon">→</span> خدماتنا في الجبيل</a></li>
+                </ul>
+            </div>
+
+            <!-- Blog & Articles -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">📚</span>
+                    المقالات والأدلة
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="blog.php" class="sitemap-link"><span class="link-icon">→</span> المدونة</a></li>
+                    <li><a href="articles/thermal-insulation-benefits.php" class="sitemap-link"><span class="link-icon">→</span> فوائد العزل الحراري</a></li>
+                    <li><a href="articles/water-proofing-guide.php" class="sitemap-link"><span class="link-icon">→</span> دليل العزل المائي</a></li>
+                    <li><a href="articles/renovation-tips.php" class="sitemap-link"><span class="link-icon">→</span> نصائح الترميم</a></li>
+                    <li><a href="articles/maintenance-guide.php" class="sitemap-link"><span class="link-icon">→</span> دليل الصيانة</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">🆘</span>
+                    الدعم والمساعدة
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="faq.php" class="sitemap-link"><span class="link-icon">→</span> الأسئلة الشائعة</a></li>
+                    <li><a href="careers.php" class="sitemap-link"><span class="link-icon">→</span> الوظائف</a></li>
+                    <li><a href="support.php" class="sitemap-link"><span class="link-icon">→</span> الدعم الفني</a></li>
+                    <li><a href="warranty.php" class="sitemap-link"><span class="link-icon">→</span> الضمان</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">⚖️</span>
+                    الصفحات القانونية
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="privacy.php" class="sitemap-link"><span class="link-icon">→</span> سياسة الخصوصية</a></li>
+                    <li><a href="terms.php" class="sitemap-link"><span class="link-icon">→</span> الشروط والأحكام</a></li>
+                    <li><a href="cookies.php" class="sitemap-link"><span class="link-icon">→</span> سياسة ملفات تعريف الارتباط</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="sitemap-section">
+                <h2 class="sitemap-section-title">
+                    <span class="section-icon">📁</span>
+                    الموارد
+                </h2>
+                <ul class="sitemap-links">
+                    <li><a href="downloads.php" class="sitemap-link"><span class="link-icon">→</span> التحميلات</a></li>
+                    <li><a href="gallery.php" class="sitemap-link"><span class="link-icon">→</span> معرض الصور</a></li>
+                    <li><a href="videos.php" class="sitemap-link"><span class="link-icon">→</span> مكتبة الفيديو</a></li>
+                    <li><a href="sitemap.xml" class="sitemap-link" target="_blank"><span class="link-icon">→</span> خريطة الموقع XML</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div style="text-align: center; margin-top: var(--space-12); padding: var(--space-8); background: var(--bg-secondary); border-radius: var(--radius-xl);">
+            <p style="margin-bottom: var(--space-4); color: var(--text-secondary);">
+                آخر تحديث لخريطة الموقع: <?php echo date('d/m/Y'); ?>
+            </p>
+            <p style="margin: 0; color: var(--text-muted); font-size: var(--font-size-sm);">
+                هل تواجه صعوبة في العثور على ما تبحث عنه؟ <a href="contact.php" style="color: var(--primary-blue);">تواصل معنا</a> وسنساعدك
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        document.getElementById('sitemap-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const links = document.querySelectorAll('.sitemap-link');
+            const sections = document.querySelectorAll('.sitemap-section');
+            
+            sections.forEach(section => {
+                const sectionLinks = section.querySelectorAll('.sitemap-link');
+                let hasVisibleLinks = false;
+                
+                sectionLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        link.parentElement.style.display = '';
+                        hasVisibleLinks = true;
+                        
+                        // Highlight search term
+                        if (searchTerm) {
+                            const regex = new RegExp(`(${searchTerm})`, 'gi');
+                            const newText = link.innerHTML.replace(regex, '<mark style="background: yellow;">$1</mark>');
+                            link.innerHTML = newText;
+                        }
+                    } else {
+                        link.parentElement.style.display = 'none';
+                    }
+                });
+                
+                section.style.display = hasVisibleLinks ? '' : 'none';
+            });
+            
+            // If search is cleared, restore original state
+            if (!searchTerm) {
+                links.forEach(link => {
+                    link.parentElement.style.display = '';
+                    link.innerHTML = link.innerHTML.replace(/<mark[^>]*>([^<]+)<\/mark>/gi, '$1');
+                });
+                sections.forEach(section => {
+                    section.style.display = '';
+                });
+            }
+        });
+        
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Apply animation to sections
+        document.querySelectorAll('.sitemap-section').forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
