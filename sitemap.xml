@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://dammam-insulation.com/</loc>
+        <lastmod>2024-01-15T10:30:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Pages -->
+    <url>
+        <loc>https://dammam-insulation.com/about.php</loc>
+        <lastmod>2024-01-10T14:20:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/contact.php</loc>
+        <lastmod>2024-01-12T09:15:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/projects.php</loc>
+        <lastmod>2024-01-14T16:45:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/quote.php</loc>
+        <lastmod>2024-01-13T11:30:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Services -->
+    <url>
+        <loc>https://dammam-insulation.com/services/thermal-insulation.php</loc>
+        <lastmod>2024-01-10T13:20:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/services/water-insulation.php</loc>
+        <lastmod>2024-01-10T13:25:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/services/renovation.php</loc>
+        <lastmod>2024-01-10T13:30:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/services/maintenance.php</loc>
+        <lastmod>2024-01-10T13:35:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/services/consultation.php</loc>
+        <lastmod>2024-01-08T10:15:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/services/inspection.php</loc>
+        <lastmod>2024-01-08T10:20:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Project Categories -->
+    <url>
+        <loc>https://dammam-insulation.com/projects/residential.php</loc>
+        <lastmod>2024-01-14T12:00:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/projects/commercial.php</loc>
+        <lastmod>2024-01-14T12:10:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/projects/industrial.php</loc>
+        <lastmod>2024-01-14T12:20:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- City-Specific Pages -->
+    <url>
+        <loc>https://dammam-insulation.com/cities/dammam.php</loc>
+        <lastmod>2024-01-09T15:00:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/cities/khobar.php</loc>
+        <lastmod>2024-01-09T15:10:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/cities/qatif.php</loc>
+        <lastmod>2024-01-09T15:20:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/cities/jubail.php</loc>
+        <lastmod>2024-01-09T15:30:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog/Articles -->
+    <url>
+        <loc>https://dammam-insulation.com/blog.php</loc>
+        <lastmod>2024-01-15T08:00:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/articles/thermal-insulation-benefits.php</loc>
+        <lastmod>2024-01-14T14:30:00+03:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/articles/water-proofing-guide.php</loc>
+        <lastmod>2024-01-13T11:15:00+03:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/articles/renovation-tips.php</loc>
+        <lastmod>2024-01-12T16:45:00+03:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Support Pages -->
+    <url>
+        <loc>https://dammam-insulation.com/faq.php</loc>
+        <lastmod>2024-01-11T13:20:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/careers.php</loc>
+        <lastmod>2024-01-08T09:30:00+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/testimonials.php</loc>
+        <lastmod>2024-01-14T10:00:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://dammam-insulation.com/privacy.php</loc>
+        <lastmod>2024-01-01T12:00:00+03:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://dammam-insulation.com/terms.php</loc>
+        <lastmod>2024-01-01T12:05:00+03:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Sitemap Page -->
+    <url>
+        <loc>https://dammam-insulation.com/sitemap.html</loc>
+        <lastmod>2024-01-15T10:30:00+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+</urlset>
